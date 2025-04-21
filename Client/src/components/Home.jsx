@@ -10,9 +10,9 @@ const Home = () => {
 	const [totalPage, setTotalPage] = useState(1)
 
 	useEffect(() => {
-		let getPostURL = `http://localhost:4000/getPost/${pageNumber}`
+		let getPostURL = `https://full-stack-blog-app-backend.onrender.com/getPost/${pageNumber}`
 
-		if (searchQuery.length > 0) getPostURL = `http://localhost:4000/getSearchedPost/${searchQuery}/${pageNumber}`
+		if (searchQuery.length > 0) getPostURL = `https://full-stack-blog-app-backend.onrender.com/getSearchedPost/${searchQuery}/${pageNumber}`
 
 		fetch(getPostURL, {
 			method: "GET",
@@ -24,9 +24,9 @@ const Home = () => {
 	}, [pageNumber, setPostDetails, searchQuery])
 
 	useEffect(() => {
-		let totalPageQuery = `http://localhost:4000/total`
+		let totalPageQuery = `https://full-stack-blog-app-backend.onrender.com/total`
 
-		if (searchQuery.length > 0) totalPageQuery = `http://localhost:4000/total/${searchQuery}`
+		if (searchQuery.length > 0) totalPageQuery = `https://full-stack-blog-app-backend.onrender.com/total/${searchQuery}`
 
 		fetch(totalPageQuery, {
 			method: "GET",
