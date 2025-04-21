@@ -9,7 +9,7 @@ const ViewPost = () => {
 	const {id} = useParams()
 
 	useEffect(() => {
-		fetch(`http://localhost:4000/post/${id}`, {
+		fetch(`https://full-stack-blog-app-backend.onrender.com/post/${id}`, {
 			method: "GET",
 		})
 			.then((res) => res.json())
@@ -23,7 +23,7 @@ const ViewPost = () => {
 	}
 
 	async function deletePost() {
-		const response = await fetch(`http://localhost:4000/${id}`, {
+		const response = await fetch(`https://full-stack-blog-app-backend.onrender.com/${id}`, {
 			method: "DELETE",
 		})
 		if (response.ok) navTo("")
@@ -63,7 +63,7 @@ const ViewPost = () => {
 						) : null}
 					</div>
 					<div className='view-post-img'>
-						<img src={`http://localhost:4000/${postData.coverImage}`} alt='image' />
+						<img src={`https://full-stack-blog-app-backend.onrender.com/${postData.coverImage}`} alt='image' />
 					</div>
 
 					<div className='view-post-content' dangerouslySetInnerHTML={{__html: postData.content}} />
