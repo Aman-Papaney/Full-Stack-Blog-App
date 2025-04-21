@@ -19,7 +19,7 @@ const EditPost = () => {
 	const [files, setFiles] = useState()
 
 	useEffect(() => {
-		fetch(`http://localhost:4000/post/${postId}`, {
+		fetch(`https://full-stack-blog-app-backend.onrender.com/post/${postId}`, {
 			method: "GET",
 		}).then((response) => {
 			response.json().then((postInfo) => {
@@ -54,7 +54,7 @@ const EditPost = () => {
 		data.set("content", content)
 		data.set("file", files[0])
 
-		const response = await fetch(`http://localhost:4000/${postId}`, {
+		const response = await fetch(`https://full-stack-blog-app-backend.onrender.com/${postId}`, {
 			method: "PUT",
 			body: data,
 		})
