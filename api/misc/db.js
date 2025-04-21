@@ -2,7 +2,7 @@ import mongoose from "mongoose"
 
 const connectDB = () => {
 	mongoose
-		.connect("mongodb://127.0.0.1:27017/chronicles")
+		.connect("mongodb+srv://greenmilkweed:AGPn6x6AmFio108n@cluster1.ju0kk.mongodb.net/chronicles?retryWrites=true&w=majority&appName=Cluster1")
 		.then(() => {
 			console.log("Database Connection Successfull")
 		})
