@@ -30,7 +30,7 @@ const Login = () => {
 	function login(event) {
 		event.preventDefault()
 
-		fetch("http://localhost:4000/login", {
+		fetch("https://full-stack-blog-app-backend.onrender.com/login", {
 			method: "POST",
 			body: JSON.stringify(userDetails),
 			headers: {
